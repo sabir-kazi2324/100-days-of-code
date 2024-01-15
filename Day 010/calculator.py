@@ -1,4 +1,3 @@
-# calculate with previous number
 
 from art import logo
 

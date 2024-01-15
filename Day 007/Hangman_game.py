@@ -1,4 +1,3 @@
-# Hangman game
 
 from Hangman_data import stages, logo, word_list
 import random

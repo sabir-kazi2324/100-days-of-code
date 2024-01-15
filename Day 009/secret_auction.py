@@ -1,4 +1,3 @@
-# secret auction program
 
 from art import logo
 

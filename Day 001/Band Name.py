@@ -1,4 +1,3 @@
-# Band name generator
 
 print("Welcome to the band name generator.")
 city = input("What's name of city you grew up in?\n")

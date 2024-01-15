@@ -1,4 +1,3 @@
-# Ceaser Cipher code
 
 from data import logo, alphabet
 
