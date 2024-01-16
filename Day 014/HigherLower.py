@@ -46,7 +46,7 @@ a = take_candidate()
 play_game = True
 while play_game:
     b = take_candidate()
-    if a == b:
+    while a == b:
         b = take_candidate()
     show_output(a, b)
     a = b
