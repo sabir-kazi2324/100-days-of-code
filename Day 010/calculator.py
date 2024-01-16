@@ -1,4 +1,4 @@
-
+# Calculate with result
 from art import logo
 
 
