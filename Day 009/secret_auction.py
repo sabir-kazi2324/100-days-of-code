@@ -1,4 +1,4 @@
-
+# Secret Auction
 from art import logo
 
 run = True
