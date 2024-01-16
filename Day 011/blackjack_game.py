@@ -1,7 +1,7 @@
-# BlackJack Game
+# Blackjack Game
 
-from art import logo
 import random
+from art import logo
 
 
 def show_results():
@@ -59,8 +59,8 @@ def ask_user():
         global my_cards, computers_cards
         if sum(my_cards) > 21:
             run = False
+            show_results()
             break
-
         user = input(f"Type 'y' to get another cars, Type 'n' to pass: ")
         if user == "y":
             add_user_cards(1, my_cards)
@@ -68,7 +68,7 @@ def ask_user():
         elif user == "n":
             run = False
             add_comp_cards()
-        show_results()
+            show_results()
         run = False
 
 
