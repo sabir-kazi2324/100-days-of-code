@@ -1,0 +1,52 @@
+# HigherLower Game
+
+from game_data import data
+from art import logo, vs
+import random
+
+
+def check_winner(winner, guess):
+    global play_game, points
+    if winner == guess:
+        points += 1
+    else:
+        print(f"Sorry, that's wrong. Final score: {points}")
+        play_game = False
+
+
+def compare():
+    global a, b
+    winner = ""
+    follower1 = a["follower_count"]
+    follower2 = b["follower_count"]
+    if follower1 > follower2:
+        winner = "a"
+    elif follower1 < follower2:
+        winner = "b"
+    check_winner(winner, input("Who has more followers? Type 'A' or 'B': "))
+
+
+def show_output(a, b):
+    global logo, vs
+    print(logo)
+    print(f"Compare A: {a["name"]}, a {a["description"]}, from {a["country"]}")
+    print(vs)
+    print(f"Against B: {b["name"]}, a {b["description"]}, from {b["country"]}")
+    compare()
+
+
+def take_candidate():
+    global data
+    return random.choice(data)
+
+
+points = 0
+a = take_candidate()
+
+play_game = True
+while play_game:
+    b = take_candidate()
+    if a == b:
+        b = take_candidate()
+    show_output(a, b)
+    a = b
