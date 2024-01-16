@@ -17,11 +17,9 @@ def check_winner(winner, guess):
 def compare():
     global a, b
     winner = ""
-    follower1 = a["follower_count"]
-    follower2 = b["follower_count"]
-    if follower1 > follower2:
+    if a["follower_count"] > b["follower_count"]:
         winner = "a"
-    elif follower1 < follower2:
+    elif a["follower_count"] < b["follower_count"]:
         winner = "b"
     check_winner(winner, input("Who has more followers? Type 'A' or 'B': "))
 
